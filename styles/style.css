@@ -1,125 +1,104 @@
 *,
 ::after,
 ::before {
-  margin: 0;
-  padding: 0;
   box-sizing: border-box;
   font-size: 20px;
+  margin: 0;
+  padding: 0;
 }
 
+header div {
+  padding: 0.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+header div a {
+  padding: 0 0.5rem;
+  color: black;
+  text-decoration: none;
+}
 header h1 {
   display: flex;
   justify-content: center;
   align-items: center;
-  font-size: 2rem;
   height: 300px;
   background-color: #ddeef8;
-}
-header .header-item-container {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  text-align: center;
-  height: 5vh;
-  padding: 0.5rem;
-}
-header .header-item-container div,
-header .header-item-container a {
-  color: black;
-  margin: 0 0.5rem;
-  text-decoration: none;
+  font-size: 2rem;
 }
 header .menu {
   display: none;
 }
 
 section {
+  margin: 1rem 0;
   display: flex;
   justify-content: center;
-  align-items: space-between;
-  flex-wrap: wrap;
-  min-width: 1200px;
-  margin: 1rem auto;
 }
-section .item {
-  margin: 0.5rem 0.5rem;
+section .section-container {
+  max-width: 1200px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+}
+section .section-container .item-container-1 {
+  height: 50px;
+  grid-column: span 2;
+  display: flex;
+  align-items: center;
   background-color: #ddeef8;
 }
-section .section-header {
-  width: 1200px;
-  display: flex;
+section .section-container .item-container-1 p {
+  padding: 0 1rem;
 }
-section .section-header .item-1,
-section .section-header .item-2 {
-  height: 50px;
-  display: flex;
-  flex-grow: 1;
+section .section-container .item-container-2 {
+  background-color: #ddeef8;
 }
-section .section-header .item-1 p,
-section .section-header .item-2 p {
-  padding: 0 0.5rem;
-  display: flex;
-  align-items: center;
-}
-section .section-main {
-  width: 1200px;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-}
-section .section-main p {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding: 0.5rem 0rem;
+section .section-container .item-container-2 p {
+  padding: 1rem;
   text-align: center;
 }
-section .img-item {
-  width: 280px;
-  height: 200px;
+section .section-container div {
+  margin: 0.5rem;
 }
-section .img-item-header {
+section .section-container div img.img-item-1 {
   width: 80px;
-  height: 50px;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+section .section-container div img.img-item-2 {
+  width: 100%;
+  height: 200px;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 @media screen and (max-width: 1200px) {
-  section {
-    min-width: 90%;
-  }
-  section .item {
-    margin: 0.5rem 0.5rem;
-    background-color: #ddeef8;
-  }
-  section .section-header {
+  section .section-container {
     width: 90%;
   }
-  section .section-main {
-    width: 90%;
-  }
-  section .section-main .item-main {
-    height: 30vh;
-    flex: 1 1 340px;
-  }
-  section .img-item {
-    width: 100%;
-    height: 80%;
-  }
-}
-@media screen and (max-width: 800px) {
-  section .section-main .item-main {
-    flex: 1 1 250px;
+  section .section-container .item-container-2 {
+    grid-column: span 2;
   }
 }
 @media screen and (max-width: 600px) {
-  section .section-header {
-    flex-direction: column;
+  section .section-container {
+    width: 90%;
   }
-  .header-item {
-    display: none;
+  section .section-container .item-container-1 {
+    grid-column: span 4;
+  }
+  section .section-container .item-container-2 {
+    grid-column: span 4;
   }
   header .menu {
     display: block;
     width: 50px;
+    height: 50px;
+    -o-object-fit: cover;
+       object-fit: cover;
+  }
+  header .header-item {
+    display: none;
   }
 }/*# sourceMappingURL=style.css.map */
