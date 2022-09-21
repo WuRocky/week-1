@@ -7,6 +7,10 @@
   padding: 0;
 }
 
+i {
+  pointer-events: none;
+}
+
 header div {
   padding: 0.5rem;
   display: flex;
@@ -88,6 +92,10 @@ section .section-container .img-star {
   top: 5px;
   height: 35px;
   width: 35px;
+  opacity: 0.5;
+}
+section .section-container .done {
+  opacity: 1;
 }
 
 @media screen and (max-width: 1200px) {
