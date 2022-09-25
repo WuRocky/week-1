@@ -7,6 +7,10 @@
 	padding: 0;
 }
 
+i {
+	pointer-events: none;
+}
+
 header {
 	div {
 		padding: 0.5rem;
@@ -86,6 +90,10 @@ section {
 			top: 5px;
 			height: 35px;
 			width: 35px;
+			opacity: 0.5;
+		}
+		.done {
+			opacity: 1;
 		}
 	}
 }
